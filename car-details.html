@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <!--<< Header Area >>-->
 
 <head>
@@ -31,6 +31,97 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        /*
+ * ESTILOS PARA LA PÁGINA DE DETALLES DE SERVICIO
+ */
+        .service-detail-section {
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .service-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-content .service-plan {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .service-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .service-content .price {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #198754;
+            /* Un color verde para el precio */
+            margin-bottom: 20px;
+        }
+
+        .service-content .description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #6c757d;
+            margin-bottom: 25px;
+        }
+
+        .service-content h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .features-list-detailed {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features-list-detailed li {
+            font-size: 1.05rem;
+            padding: 10px 0 10px 35px;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .features-list-detailed li:last-child {
+            border-bottom: none;
+        }
+
+        .features-list-detailed li::before {
+            content: '✔';
+            font-weight: bold;
+            color: #198754;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .service-content .theme-btn {
+            margin-top: 30px;
+            padding: 15px 40px;
+        }
+
+        /* Fondo claro para secciones alternas */
+        .bg-light {
+            background-color: #cecece !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -40,31 +131,25 @@
         <div class="animation-preloader">
             <div class="spinner">
             </div>
-            <div class="txt-loading">
-                <span data-text-preloader="C" class="letters-loading">
-                    C
-                </span>
 
-                <span data-text-preloader="O" class="letters-loading">
-                    O
-                </span>
-                <span data-text-preloader="M" class="letters-loading">
-                    M
-                </span>
-                <span data-text-preloader="P" class="letters-loading">
-                    P
+            <div class="txt-loading">
+                <span data-text-preloader="S" class="letters-loading">
+                    S
                 </span>
                 <span data-text-preloader="A" class="letters-loading">
                     A
                 </span>
-                <span data-text-preloader="Ñ" class="letters-loading">
-                    Ñ
-                </span>
-                <span data-text-preloader="I" class="letters-loading">
-                    I
+                <span data-text-preloader="B" class="letters-loading">
+                    B
                 </span>
                 <span data-text-preloader="A" class="letters-loading">
                     A
+                </span>
+                <span data-text-preloader="E" class="letters-loading">
+                    E
+                </span>
+                <span data-text-preloader="Z" class="letters-loading">
+                    Z
                 </span>
             </div>
             <!-- <p class="text-center">Chargement</p> -->
@@ -149,7 +234,9 @@
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a target="_blank" href="https://wa.me/14384662851?text=Hola,%20¿podrían%20enviarme%20información%20sobre%20sus%20paquetes%20y%20precios%20de%20lavado%20de%20autos?">+1 (438) 466-2851</a>
+                                    <a target="_blank"
+                                        href="https://wa.me/14384662851?text=Hola,%20¿podrían%20enviarme%20información%20sobre%20sus%20paquetes%20y%20precios%20de%20lavado%20de%20autos?">+1
+                                        (438) 466-2851</a>
                                 </div>
                             </li>
                         </ul>
@@ -335,305 +422,232 @@
         </div>
     </div>
 
-    <!-- Car Details Section Start -->
-    <section class="car-details fix section-padding">
+
+
+
+    <section id="forfait-a" class="service-detail-section section-padding">
         <div class="container">
-            <div class="car-details-wrapper">
-                <div class="row g-5">
-                    <div class="col-lg-12">
-                        <div class="car-details-items">
-                            <div class="car-image">
-                                <!-- <img src="assets/img/car/car-details.jpg" alt="img"> -->
-                                <img src="assets/img/galeria/servicio_1.jpg" alt="img">
-                            </div>
-                            <div class="car-content">
-                                <h3>{NOMBRE DEL SERVICIO}</h3>
-                                <h6>$000.00 </h6>
-                                <p class="mt-4 mb-4" style="text-align: justify;">
-                                    (DESCRIPCION DEL SERVICIO) Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                    Ea ipsam earum nam, quod necessitatibus veritatis deleniti iusto asperiores iste
-                                    officia eligendi odit quae fuga magni eveniet velit enim sint error nemo assumenda.
-                                    Recusandae reiciendis veniam molestias aliquam libero quam, incidunt magni iste
-                                    aliquid, neque voluptates sit facere nihil quos nisi rerum odit corporis omnis
-                                    iusto. Numquam nesciunt, facilis id aliquid iusto velit. Tenetur reprehenderit
-                                    corporis dolorum eius sequi voluptatibus excepturi?
-                                </p>
-
-                                <!-- <div class="icon-details-area">
-                                        <h4>Key Features</h4>
-                                        <div class="icon-details-main-items">
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/icon/07.png" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>body:</h6>
-                                                    <p>Sedan</p>
-                                                </div>
-                                            </div>
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/icon/07.png" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Mileage:</h6>
-                                                    <p>70.000 (Mi)</p>
-                                                </div>
-                                            </div>
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/icon/07.png" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Year:</h6>
-                                                    <p>2024</p>
-                                                </div>
-                                            </div>
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/icon/07.png" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Engine:</h6>
-                                                    <p>2500 cc</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="icon-details-main-items">
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/door.svg" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Passengers:</h6>
-                                                    <p>6 Seats</p>
-                                                </div>
-                                            </div>
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/seat.svg" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Gear:</h6>
-                                                    <p>Automatic</p>
-                                                </div>
-                                            </div>
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/automatic.svg" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Gear:</h6>
-                                                    <p>Automatic</p>
-                                                </div>
-                                            </div>
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/petrol.svg" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Fuel:</h6>
-                                                    <p>Petrol</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
-
-                                <!-- <div class="price-table-area">
-                                        <h6>Table Price <span>( by day of the week )</span></h6>
-                                        <div class="price-table-items section-bg">
-                                            <p>Monday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                        <div class="price-table-items">
-                                            <p>Tuesday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                        <div class="price-table-items section-bg">
-                                            <p>Wednesday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                        <div class="price-table-items">
-                                            <p>Thursday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                        <div class="price-table-items section-bg">
-                                            <p>Friday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                        <div class="price-table-items">
-                                            <p>Saturday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                        <div class="price-table-items section-bg">
-                                            <p>Sunday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                    </div> -->
-                                <!-- <div class="car-video">
-                                        <img src="assets/img/car/car-details-2.jpg" alt="img">
-                                        <div class="video-box">
-                                            <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I" class="video-btn ripple video-popup">
-                                                <i class="fa-solid fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div> -->
-                            </div>
-                        </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="service-image">
+                        <img src="assets/img/galeria/servicio_2.jpg" alt="Traitement Céramique">
                     </div>
-
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-content">
+                        <span class="service-plan">Forfait A</span>
+                        <h2>Traitement Céramique - Protection Haut de Gamme pour Votre Véhicule</h2>
+                        <h3 class="price">CAD $450</h3>
+                        <p class="description">
+                            Un revêtement à base de nanotechnologie aui crée une couche protectrice sur la peinture, la protégeant des rayons UV, pluies acides, fientes d'oiseaux, saletés, et autres contaminants.
+                        </p>
+                        <h4>Comprend :</h4>
+                        <ul class="features-list-detailed">
+                            <li>Lavage complet et décontamination de la carrosserie</li>
+                            <li>Polissage correctif (si nécessaire)</li>
+                            <li>Application du traitement céramique professionnel</li>
+                            <li>Scellement de la peinture pour un effet brillant et miroir</li>
+                            <li>Protection hydrophobe (l'eau et la saleté glissent)</li>
+                            <li>Durée de protection: de 1 à 3 ans selon le produit utilisé</li>
+                        </ul>
+                        <a href="https://wa.me/524384662851?text=Bonjour,%0A%0AJ'aimerais%20plus%20d'informations%20sur%20le%20service%20suivant%20:%0A%0A*Forfait%20A%20(Traitement%20C%C3%A9ramique)*%0A%0ASerait-il%20possible%20de%20prendre%20un%20rendez-vous%20?%0A%0AMerci." target="_blank" class="theme-btn">Réserver via WhatsApp</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-        <section class="car-details fix section-padding">
+    <section id="forfait-b" class="service-detail-section section-padding bg-light">
         <div class="container">
-            <div class="car-details-wrapper">
-                <div class="row g-5">
-                    <div class="col-lg-12">
-                        <div class="car-details-items">
-                            <div class="car-image">
-                                <!-- <img src="assets/img/car/car-details.jpg" alt="img"> -->
-                                <img src="assets/img/galeria/servicio_2.jpg" alt="img">
-                            </div>
-                            <div class="car-content">
-                                <h3>{NOMBRE DEL SERVICIO}</h3>
-                                <h6>$000.00 </h6>
-                                <p class="mt-4 mb-4" style="text-align: justify;">
-                                    (DESCRIPCION DEL SERVICIO) Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                    Ea ipsam earum nam, quod necessitatibus veritatis deleniti iusto asperiores iste
-                                    officia eligendi odit quae fuga magni eveniet velit enim sint error nemo assumenda.
-                                    Recusandae reiciendis veniam molestias aliquam libero quam, incidunt magni iste
-                                    aliquid, neque voluptates sit facere nihil quos nisi rerum odit corporis omnis
-                                    iusto. Numquam nesciunt, facilis id aliquid iusto velit. Tenetur reprehenderit
-                                    corporis dolorum eius sequi voluptatibus excepturi?
-                                </p>
-
-                                <!-- <div class="icon-details-area">
-                                        <h4>Key Features</h4>
-                                        <div class="icon-details-main-items">
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/icon/07.png" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>body:</h6>
-                                                    <p>Sedan</p>
-                                                </div>
-                                            </div>
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/icon/07.png" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Mileage:</h6>
-                                                    <p>70.000 (Mi)</p>
-                                                </div>
-                                            </div>
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/icon/07.png" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Year:</h6>
-                                                    <p>2024</p>
-                                                </div>
-                                            </div>
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/icon/07.png" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Engine:</h6>
-                                                    <p>2500 cc</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="icon-details-main-items">
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/door.svg" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Passengers:</h6>
-                                                    <p>6 Seats</p>
-                                                </div>
-                                            </div>
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/seat.svg" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Gear:</h6>
-                                                    <p>Automatic</p>
-                                                </div>
-                                            </div>
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/automatic.svg" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Gear:</h6>
-                                                    <p>Automatic</p>
-                                                </div>
-                                            </div>
-                                            <div class="icon-items">
-                                                <div class="icon">
-                                                    <img src="assets/img/car/petrol.svg" alt="img">
-                                                </div>
-                                                <div class="content">
-                                                    <h6>Fuel:</h6>
-                                                    <p>Petrol</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
-
-                                <!-- <div class="price-table-area">
-                                        <h6>Table Price <span>( by day of the week )</span></h6>
-                                        <div class="price-table-items section-bg">
-                                            <p>Monday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                        <div class="price-table-items">
-                                            <p>Tuesday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                        <div class="price-table-items section-bg">
-                                            <p>Wednesday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                        <div class="price-table-items">
-                                            <p>Thursday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                        <div class="price-table-items section-bg">
-                                            <p>Friday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                        <div class="price-table-items">
-                                            <p>Saturday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                        <div class="price-table-items section-bg">
-                                            <p>Sunday</p>
-                                            <p>$70.00</p>
-                                        </div>
-                                    </div> -->
-                                <!-- <div class="car-video">
-                                        <img src="assets/img/car/car-details-2.jpg" alt="img">
-                                        <div class="video-box">
-                                            <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I" class="video-btn ripple video-popup">
-                                                <i class="fa-solid fa-play"></i>
-                                            </a>
-                                        </div>
-                                    </div> -->
-                            </div>
-                        </div>
+            <div class="row g-5 flex-row-reverse">
+                <div class="col-lg-6">
+                    <div class="service-image">
+                        <img src="assets/img/galeria/servicio_1.jpg" alt="Lavage Complet + Moteur">
                     </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-content">
+                        <span class="service-plan">Forfait B</span>
+                        <h2>Lavage Complet avec Shampooing + Moteur</h2>
+                        <h3 class="price">CAD $200</h3>
+                        <h4>Extérieur :</h4>
+                        <ul class="features-list-detailed">
+                            <li>Lavage complet de la carrosserie avec shampooing moussant professionnel</li>
+                            <li>Rinçage à haute pression</li>
+                            <li>Nettoyage des jantes et des pneus</li>
+                            <li>Application de cire liquide (optionnel)</li>
+                            <li>Séchage manuel avec chiffon microfibre</li>
+                            <li>Vitres extérieures nettoyées</li>
+                        </ul>
+                        <h4>Intérieur :</h4>
+                        <ul class="features-list-detailed">
+                            <li>Aspiration des sièges, tapis et coffre</li>
+                            <li>Nettoyage du tableau de bord, portières et console</li>
+                            <li>Dépoussiérage et nettoyage des surfaces</li>
+                            <li>Vitres intérieures propres</li>
+                            <li>Parfum d'ambiance (optionnel)</li>
+                        </ul>
+                        <h4>Moteur :</h4>
+                        <ul class="features-list-detailed">
+                            <li>Dégraissage et nettoyage en douceur du compartiment moteur</li>
+                        </ul>
+                        <a href="https://wa.me/524384662851?text=Bonjour,%0A%0AJ'aimerais%20plus%20d'informations%20sur%20le%20service%20suivant%20:%0A%0A*Forfait%20B%20(Lavage%20Complet%20%2B%20Moteur)*%0A%0ASerait-il%20possible%20de%20prendre%20un%20rendez-vous%20?%0A%0AMerci." class="theme-btn">Réserver ce Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="forfait-c" class="service-detail-section section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="service-image">
+                        <img src="assets/img/galeria/servicio_2.jpg" alt="Lavage Voiture Neuve">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-content">
+                        <span class="service-plan">Forfait C</span>
+                        <h2>Lavage Complet Voiture Neuve - Intérieur & Extérieur + Retrait des Plastiques</h2>
+                        <h3 class="price">CAD $150</h3>
+                        <p class="description">
+                           Un service idéal pour les véhicules neufs ou sortis de concession. Offrez à votre voiture un premier soin professionnel, tout en douceur et sans risque pour les surfaces.
+                        </p>
+                        <h4>Extérieur :</h4>
+                        <ul class="features-list-detailed">
+                            <li>Lavage complet de la carrosserie avec shampooing neutre</li>
+                            <li>Rinçage haute pression et séchage manuel avec chiffon microfibre</li>
+                            <li>Nettoyage des jantes et des pneus</li>
+                            <li>Vitres extérieures propres et sans traces</li>
+                        </ul>
+
+                        <h4>Intérieur :</h4>
+
+                        <ul class="features-list-detailed">
+                           <li>Retrait soigneux des films plastiques de protection (sièges, tableau de bord, écrans, portes)</li>
+                           <li>Aspiration complète (sièges, tapis, coffre)</li>
+                           <li>Nettoyage du tableau de bord, des panneaux et de la console avec des produits doux</li>
+                           <li>Vitres intérieures impeccable</li>
+                           <li>Parfum d'intérieur léger (en option)</li>
+                           <li>Votre véhicule neuf, propre, prêt à briller et sans aucun plastique</li>
+                        </ul>
+                        <a href="https://wa.me/524384662851?text=Bonjour,%0A%0AJ'aimerais%20plus%20d'informations%20sur%20le%20service%20suivant%20:%0A%0A*Forfait%20C%20(Lavage%20Voiture%20Neuve)*%0A%0ASerait-il%20possible%20de%20prendre%20un%20rendez-vous%20?%0A%0AMerci." class="theme-btn">Réserver ce Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="forfait-d" class="service-detail-section section-padding bg-light">
+        <div class="container">
+            <div class="row g-5 flex-row-reverse">
+                <div class="col-lg-6">
+                    <div class="service-image">
+                        <img src="assets/img/galeria/servicio_1.jpg" alt="Lavage Complet + Moteur">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-content">
+                        <span class="service-plan">Forfait D</span>
+                        <h2>Lavage Spring Wash - Intérieur & Extérieur</h2>
+                        <h3 class="price">CAD $100</h3>
+                        <h4>Preparez votre voiture pour la saison avec un nettoyage complet et rafraîchissant </h4>
+                        <h4>Extérieur :</h4>
+
+
+                        <ul class="features-list-detailed">
+                            <li>Lavage complet de la carrosserie avec shampooing moussant</li>
+                            <li>Nettoyage des jantes et des pneus</li>
+                            <li>Rinçage haute pression</li>
+                            <li>Application de cire liquide pour un fini brillant et protégé</li>
+                            <li>Séchage à la main avec chiffon microfibre</li>
+                            <li>Vitres extérieures impeccables</li>
+                        </ul>
+                        <h4>Intérieur :</h4>
+                        <ul class="features-list-detailed">
+                            <li>Aspiration en profondeur (sièges, tapis, coffre)</li>
+                            <li>Nettoyage du tableau de bord, des portières et de la console</li>
+                            <li>Dépoussiérage des surfaces et des aérations</li>
+                            <li>Vitres intérieures sans traces</li>
+                            <li>Parfum d'intérieur frai, n option) </li>
+                        </ul>
+                        
+                        <a href="https://wa.me/524384662851?text=Bonjour,%0A%0AJ'aimerais%20plus%20d'informations%20sur%20le%20service%20suivant%20:%0A%0A*Forfait%20D%20(Lavage%20Spring%20Wash)*%0A%0ASerait-il%20possible%20de%20prendre%20un%20rendez-vous%20?%0A%0AMerci." class="theme-btn">Réserver ce Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="forfait-e" class="service-detail-section section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="service-image">
+                        <img src="assets/img/galeria/servicio_2.jpg" alt="Traitement Céramique">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-content">
+                        <span class="service-plan">Forfait E</span>
+                        <h2>Lavage Intérieur & Extérieur -carrosserie</h2>
+                        <h3 class="price">CAD $40</h3>
+                        
+                        <h4>Extérieur :</h4>
+                        <ul class="features-list-detailed">
+                            <li>Lavage complet de la carrosserie avec shampooing moussant</li>
+                            <li>Rinçage à haute pression</li>
+                            <li>Nettoyage des jantes et des pneus</li>
+                            <li>Application de cire liquide (optionnel)</li>
+                            <li>Séchage manuel avec chiffon microfibre</li>
+                            <li>Nettoyage des vitres extérieures</li>                                                                                                                                                                        
+                        </ul>
+
+                        <h4>Intérieur</h4>
+                        <ul class="features-list-detailed">
+                            <li>Aspiration complète (sièges, tapis, coffre)</li>
+                            <li>Nettoyage du tableau de bord, des portières et de la console centrale</li>
+                            <li>Dépoussiérage des surfaces et des aérations</li>
+                            <li>Nettoyage des vitres intérieures</li>
+                            <li>Parfum d'ambiance (optionnel)</li>                            
+                        </ul>
+                        <h4>Intérieur :</h4>
+                        <a href="https://wa.me/524384662851?text=Bonjour,%0A%0AJ'aimerais%20plus%20d'informations%20sur%20le%20service%20suivant%20:%0A%0A*Forfait%20E%20(Lavage%20Int%C3%A9rieur%20%26%20Ext%C3%A9rieur)*%0A%0ASerait-il%20possible%20de%20prendre%20un%20rendez-vous%20?%0A%0AMerci." target="_blank" class="theme-btn">Réserver via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="forfait-f" class="service-detail-section section-padding bg-light">
+        <div class="container">
+            <div class="row g-5 flex-row-reverse">
+                <div class="col-lg-6">
+                    <div class="service-image">
+                        <img src="assets/img/galeria/servicio_1.jpg" alt="Lavage Complet + Moteur">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-content">
+                        <span class="service-plan">Forfait F</span>
+                        <h2>Lavage Extérieur</h2>
+                        <h3 class="price">CAD $15.99</h3>
+
+
+                        <h4>Comprend :</h4>
+                        <ul class="features-list-detailed">
+                            <li>Lavage complet de la carrosserie avec shampooing spécialisé</li>
+                            <li>Rinçage à haute pression pour éliminer la saleté et les résidus</li>
+                            <li>Nettoyage des jantes et des pneus</li>
+                            <li>Application de cire liquide (optionnel)</li>
+                            <li>Séchage manuel avec chiffon en microfibre</li>
+                            <li>Nettoyage des vitres extérieures</li>
+                            <li>Un extérieur propre, brillant et soigné comme au premier jour.</li>
+                        </ul>
+                        
+                        <a href="https://wa.me/524384662851?text=Bonjour,%0A%0AJ'aimerais%20plus%20d'informations%20sur%20le%20service%20suivant%20:%0A%0A*Forfait%20F%20(Lavage%20Ext%C3%A9rieur)*%0A%0ASerait-il%20possible%20de%20prendre%20un%20rendez-vous%20?%0A%0AMerci." class="theme-btn">Réserver ce Plan</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <!--<< Header Area >>-->
 
 <head>
@@ -31,6 +31,163 @@
   <link rel="stylesheet" href="assets/css/nice-select.css">
   <!--<< Main.css >>-->
   <link rel="stylesheet" href="assets/css/main.css">
+
+
+  <style>
+    .pricing-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-card:hover {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .pricing-card .card-header {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .pricing-card .card-header h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .pricing-card .card-header .plan-name {
+      font-size: 1rem;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+
+    .pricing-card .card-body {
+      padding: 1.5rem;
+      flex-grow: 1;
+      text-align: left;
+    }
+
+    .pricing-card .price {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      color: #007bff;
+    }
+
+    .pricing-card .package-name {
+      text-align: center;
+      font-weight: 600;
+      color: #6c757d;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      min-height: 44px;
+    }
+
+    .pricing-card .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .pricing-card .features-list li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .pricing-card .features-list li:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-card .card-footer {
+      padding: 1.5rem;
+      background-color: #f8f9fa;
+      margin-top: auto;
+    }
+
+    /* ESTILO RECOMENDADO */
+    .pricing-card.recommended {
+      border-width: 2px;
+      border-color: #ffc107;
+      position: relative;
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: 15px;
+      right: -30px;
+      background-color: #ffc107;
+      color: #000;
+      padding: 5px 30px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      transform: rotate(45deg);
+      text-transform: uppercase;
+    }
+
+    /* ESTILO PREMIUM "ELITE" */
+    .pricing-card.card-dark {
+      background-color: #111;
+      color: #f0f0f0;
+      border: 2px solid #FFD700;
+    }
+
+    .pricing-card.card-dark .card-header h3 {
+      color: #FFD700;
+    }
+
+    .pricing-card.card-dark .card-header {
+      border-color: #444;
+    }
+
+    .pricing-card.card-dark .features-list li {
+      border-color: #444;
+    }
+
+    .pricing-card.card-dark .card-footer {
+      background-color: #1a1a1a;
+    }
+
+    .pricing-card.card-dark .btn-light {
+      background-color: #FFD700;
+      color: #000;
+      border-color: #FFD700;
+      font-weight: bold;
+    }
+
+    .pricing-card.card-dark .btn-light:hover {
+      background-color: #ffc107;
+      border-color: #ffc107;
+      color: #000;
+    }
+
+
+    .car-sale-content .promo-terms {
+    font-size: 1.1rem;
+    color: #efefef; /* Un color gris claro que contraste con el fondo */
+    margin-top: 15px;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajusta el botón si es necesario */
+.car-sale-content .theme-btn {
+    padding: 15px 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+  </style>
 </head>
 
 <body>
@@ -40,31 +197,25 @@
     <div class="animation-preloader">
       <div class="spinner">
       </div>
-      <div class="txt-loading">
-        <span data-text-preloader="C" class="letters-loading">
-          C
-        </span>
 
-        <span data-text-preloader="O" class="letters-loading">
-          O
-        </span>
-        <span data-text-preloader="M" class="letters-loading">
-          M
-        </span>
-        <span data-text-preloader="P" class="letters-loading">
-          P
+      <div class="txt-loading">
+        <span data-text-preloader="S" class="letters-loading">
+          S
         </span>
         <span data-text-preloader="A" class="letters-loading">
           A
         </span>
-        <span data-text-preloader="Ñ" class="letters-loading">
-          Ñ
-        </span>
-        <span data-text-preloader="I" class="letters-loading">
-          I
+        <span data-text-preloader="B" class="letters-loading">
+          B
         </span>
         <span data-text-preloader="A" class="letters-loading">
           A
+        </span>
+        <span data-text-preloader="E" class="letters-loading">
+          E
+        </span>
+        <span data-text-preloader="Z" class="letters-loading">
+          Z
         </span>
       </div>
       <!-- <p class="text-center">Chargement</p> -->
@@ -148,8 +299,10 @@
                   <i class="fa-brands fa-whatsapp"></i>
                 </div>
                 <div class="offcanvas__contact-text">
-                  <a href="http://"  rel="noopener noreferrer"></a>
-                  <a target="_blank" href="https://wa.me/14384662851?text=Hola,%20¿podrían%20enviarme%20información%20sobre%20sus%20paquetes%20y%20precios%20de%20lavado%20de%20autos?">+1 (438) 466-2851</a>
+                  <a href="http://" rel="noopener noreferrer"></a>
+                  <a target="_blank"
+                    href="https://wa.me/14384662851?text=Hola,%20¿podrían%20enviarme%20información%20sobre%20sus%20paquetes%20y%20precios%20de%20lavado%20de%20autos?">+1
+                    (438) 466-2851</a>
                 </div>
               </li>
             </ul>
@@ -385,196 +538,185 @@
     </div>
   </section>
 
-  <!-- Search Booking Section Start -->
-  <section class="search-booking-section section-padding">
+
+  <section id="forfaits" class="section-padding" style="background-color: #f8f9fa;">
     <div class="container">
-      <div class="search-booking-wrapper">
-        <div class="row g-4 justify-content-between">
-          <div class="col-xl-6 col-lg-6">
-            <div class="search-booking-content">
-              <div class="section-title">
-                <!-- aqui poner el logo  -->
-                <!-- <img src="assets/img/sub-icon.png" alt="icon-img" class="wow fadeInUp"> -->
-                <h2 class="wow fadeInUp text-center" data-wow-delay=".4s">
-                  Nuestros paquetes
-                </h2>
-              </div>
+
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 style="font-size: 2.8rem; font-weight: 700;">Nos Forfaits</h2>
+          <p class="lead text-muted">Choisissez le plan parfait pour l'entretien de votre voiture.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card card-dark h-100">
+            <div class="card-header">
+              <h3>Forfait A <span class="plan-name">(ELITE)</span></h3>
+            </div>
+            <div class="card-body">
+              <p class="price" style="color:#FFD700;">CAD $450</p>
+              <p class="package-name" style="color:#FFD700;">Traitement Céramique - Protection Haut de Gamme pour Votre
+                Véhicule</p>
+              <ul class="features-list">
+                <li>Lavage complet et décontamination de la carrosserie</li>
+                <li>Polissage correctif (si nécessaire)</li>
+                <li>Application du traitement céramique professionnel</li>
+                <li>Scellement de la peinture pour un effet brillant et miroir</li>
+                <li>Protection hydrophobe (l'eau et la saleté glissent)</li>
+                <li>Durée de protection: de 1 à 3 ans selon le produit utilisé</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="/car-details.html#forfait-a" class="btn btn-light w-100">Voir les Détails</a>
             </div>
           </div>
-          <div class="col-xl-12 col-lg-6">
-            <div class="row g-4">
+        </div>
 
-              <div class="col-lg-3 col-md-6">
-                <div class="card h-100 border-success border-2">
-                  <div class="card-header bg-success text-white text-center">
-                    <h3 class="fw-bold mb-0">Paquete A</h3>
-                  </div>
-                  <div class="card-body text-center d-flex flex-column">
-                    <p class="display-4 fw-bolder my-4">$200</p>
-                    <ul class="list-unstyled text-start">
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Lavado
-                        exterior.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Shampoo espuma
-                        activa.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Lavado de
-                        rines y
-                        llantas.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Aspirado
-                        interior
-                        (opcional).
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Armor-All en
-                        llantas.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Secado a mano.
-                      </li>
-                    </ul>
-
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6">
-                <div class="card h-100 border-warning border-2">
-                  <div class="card-header bg-warning text-dark text-center">
-                    <h3 class="fw-bold mb-0">Paquete B</h3>
-                  </div>
-                  <div class="card-body text-center d-flex flex-column">
-                    <p class="display-4 fw-bolder my-4">$225</p>
-                    <ul class="list-unstyled text-start">
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Lavado
-                        exterior.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Shampoo espuma
-                        activa.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Cera
-                        selladora.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Lavado de
-                        rines y
-                        llantas.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Aspirado
-                        interior
-                        (opcional).
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Armor-All en
-                        llantas.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Secado a mano.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6">
-                <div class="card h-100 border-danger border-2">
-                  <div class="card-header bg-danger text-white text-center">
-                    <h3 class="fw-bold mb-0">Paquete C</h3>
-                  </div>
-                  <div class="card-body text-center d-flex flex-column">
-                    <p class="display-4 fw-bolder my-4">$245</p>
-                    <ul class="list-unstyled text-start">
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Lavado
-                        exterior.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Shampoo espuma
-                        activa.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Tri-color
-                        polish
-                        conditioner.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Cera
-                        selladora.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Lavado de
-                        rines y
-                        llantas.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Aspirado
-                        interior
-                        (opcional).
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Armor-All en
-                        llantas.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6">
-                <div class="card h-100 border-dark border-2">
-                  <div class="card-header bg-dark text-white text-center">
-                    <h3 class="fw-bold mb-0 text-white ">Detallado</h3>
-                  </div>
-                  <div class="card-body text-center d-flex flex-column">
-                    <p class="display-4 fw-bolder my-4">ELITE</p>
-                    <p class="fw-bold">Todo lo que necesitas para que tu auto luzca.</p>
-                    <p class="small mb-3">Limpieza y cuidado a detalle de tu auto.</p>
-                    <ul class="list-unstyled text-start">
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Lavado de
-                        carrocería
-                        ext.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Aspirado de
-                        interiores
-                        y cajuela.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Limpieza y
-                        acondicionador.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Eliminación de
-                        contaminantes.
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i> Pulido y
-                        encerado
-                        profesional.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card h-100">
+            <div class="card-header">
+              <h3>Forfait B</h3>
+            </div>
+            <div class="card-body">
+              <p class="price"> CAD $200</p>
+              <p class="package-name">Lavage Complet avec Shampooing + Moteur</p>
+              <ul class="features-list">
+                <li>Lavage complet de la carrosserie avec shampooing moussant professionnel</li>
+                <li>Rinçage à haute pression</li>
+                <li>Nettoyage des jantes et des pneus</li>
+                <li>Aspiration des sièges, tapis et coffre</li>
+                <li>Nettoyage du tableau de bord, portières et console</li>
+                <li>Dépoussiérage et nettoyage des surfaces</li>
+                <li>Dégraissage et nettoyage en douceur du compartiment moteur</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="/car-details.html#forfait-b" class="btn btn-outline-dark w-100">Voir les Détails</a>
             </div>
           </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card h-100">
+            <div class="card-header">
+              <h3>Forfait C</h3>
+            </div>
+            <div class="card-body">
+              <p class="price">CAD $150</p>
+              <p class="package-name">Lavage Complet Voiture Neuve - Intérieur & Extérieur + Retrait des Plastiques</p>
+              <ul class="features-list">
+                <li>Lavage complet de la carrosserie avec shampooing neutre</li>
+                <li>Rinçage haute pression et séchage manuel avec chiffon microfibre</li>
+                <li>Retrait soigneux des films plastiques de protection</li>
+                <li>Aspiration complète (sièges, tapis, coffre)</li>
+                <li>Nettoyage du tableau de bord, des panneaux et de la console avec des produits doux</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="/car-details.html#forfait-c" class="btn btn-outline-dark w-100">Voir les Détails</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card h-100">
+            <div class="card-header">
+              <h3>Forfait D</h3>
+            </div>
+            <div class="card-body">
+              <p class="price">CAD $110</p>
+              <p class="package-name">Lavage Spring Wash - Intérieur & Extérieur</p>
+              <ul class="features-list">
+                <li>Lavage complet de la carrosserie avec shampooing moussant</li>
+                <li>Application de cire liquide pour un fini brillant et protégé</li>
+                <li>Aspiration en profondeur (sièges, tapis, coffre)</li>
+                <li>Nettoyage du tableau de bord, des portières et de la console</li>
+                <li>Dépoussiérage des surfaces et des aérations</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="/car-details.html#forfait-d" class="btn btn-outline-dark w-100">Voir les Détails</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card recommended h-100">
+            <div class="popular-badge">Le plus Populaire</div>
+            <div class="card-header border-warning">
+              <h3>Forfait E</h3>
+            </div>
+            <div class="card-body">
+              <p class="price" style="color:#000;">CAD $40</p>
+              <p class="package-name">Lavage Intérieur & Extérieur</p>
+              <ul class="features-list">
+                <li>Lavage complet de la carrosserie avec shampooing moussant</li>
+                <li>Application de cire liquide (optionnel)</li>
+                <li>Aspiration complète (sièges, tapis, coffre)</li>
+                <li>Nettoyage du tableau de bord, des portières et de la console centrale</li>
+                <li>Dépoussiérage des surfaces et des aérations</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="/car-details.html#forfait-e" class="btn btn-warning w-100">Voir les Détails</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card h-100">
+            <div class="card-header">
+              <h3>Forfait F</h3>
+            </div>
+            <div class="card-body">
+              <p class="price">CAD $15.00</p>
+              <p class="package-name">Lavage Extérieur</p>
+              <ul class="features-list">
+                <li>Lavage complet de la carrosserie avec shampooing spécialisé</li>
+                <li>Rinçage à haute pression pour éliminer la saleté et les résidus</li>
+                <li>Application de cire liquide (optionnel)</li>
+                <li>Un extérieur propre, brillant et soigné comme au premier jour.</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="/car-details.html#forfait-f" class="btn btn-outline-dark w-100">Voir les Détails</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Car Sale Section Start  Para tarjetas de promos-->
+  <section class="car-sale-section fix section-padding pt-0">
+    <div class="container-fluid">
+      <div class="car-sale-wrapper">
+        <div class="sale-shape">
+          <img src="assets/img/bg-shape-saleoff.png" alt="shape-img">
+        </div>
+        <!-- <div class="badge-shape">
+        <img src="assets/img/bagde.png" alt="shape-img">
+      </div>  -->
+        <div class="car-shape">
+          <img src="assets/img/galeria/promo.jpg" alt="img">
+        </div>
+        <div class="car-sale-content">
+          <h2 class="wow fadeInUp" data-wow-delay=".3s">{Precio o descuento de la promo}</h2>
+          <h3 class="wow fadeInUp" data-wow-delay=".5s">termino o restriccion de la o</h3>
+
+          <a href="car-details.html" class="theme-btn bg-header wow fadeInUp" data-wow-delay=".7s"></a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="servicio-destacado" class="py-5 car-rentals-section-2 section-padding fix">
+
+  <!-- <section id="servicio-destacado" class="py-5 car-rentals-section-2 section-padding fix">
     <div class="container">
       <div class="row align-items-center g-5">
 
@@ -625,7 +767,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <!-- Car Rentals Section Start -->
