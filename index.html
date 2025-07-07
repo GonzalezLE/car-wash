@@ -169,24 +169,177 @@
       color: #000;
     }
 
+    /* Card a domicilio /*/
 
-    .car-sale-content .promo-terms {
-    font-size: 1.1rem;
-    color: #efefef; /* Un color gris claro que contraste con el fondo */
-    margin-top: 15px;
-    margin-bottom: 30px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    /*
+ * ESTILO PARA LA NUEVA TARJETA ILUSTRATIVA
+ */
 
-/* Ajusta el botón si es necesario */
-.car-sale-content .theme-btn {
-    padding: 15px 35px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+    .promo-card {
+      background-color: #f0f2ff;
+      /* Un fondo lavanda muy claro */
+      border-radius: 15px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid #e0e4ff;
+      transition: all 0.3s ease;
+    }
+
+    .promo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(100, 100, 200, 0.15);
+    }
+
+    /* Forma ondulada en el fondo (SVG insertado directamente) */
+    .promo-card::before {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3e%3cpath fill='%23ffffff' fill-opacity='1' d='M0,128L60,149.3C120,171,240,213,360,208C480,203,600,149,720,144C840,139,960,181,1080,186.7C1200,192,1320,160,1380,144L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z'%3e%3c/path%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
+
+    .promo-card-image {
+      height: 150px;
+      /* Ajusta la altura de la ilustración */
+      margin-bottom: 20px;
+    }
+
+    .promo-card-image img {
+      max-height: 100%;
+      width: auto;
+    }
+
+    .promo-card-content {
+      position: relative;
+      z-index: 2;
+      /* Para que el contenido esté sobre la ola */
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .promo-card .card-title {
+      font-size: 2rem;
+      font-weight: 800;
+      /* Extra-bold */
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .promo-card .highlight-red {
+      color: #e53935;
+      /* Un rojo llamativo */
+    }
+
+    .promo-card .card-description {
+      font-size: 1rem;
+      color: #6c757d;
+      margin-bottom: 20px;
+    }
+
+    .promo-card .horaires-info {
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .promo-card .horaires-info p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .promo-card .btn-promo {
+      background-color: #00C454;
+      /* Un color morado que combina */
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .promo-card .btn-promo:hover {
+      background-color: #2b6df8;
+    }
+
+    /* Este es el código que crea el efecto de ola en el fondo */
+
+    .promo-card::before {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      /* La posiciona un poco abajo para que no se vea el borde recto */
+      left: 0;
+      width: 100%;
+      height: 300px;
+
+      /* ¡AQUÍ ESTÁ LA MAGIA! Esta es la ola en formato SVG */
+      background-image: url('./assets/img/galeria/wave3.svg');
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+      /* Se asegura de que esté detrás del contenido */
+    }
+
+    /* Y no olvides el fondo de la tarjeta principal */
+    .promo-card {
+      background-color: #ffffff;
+      /* Color de fondo principal de la tarjeta */
+      position: relative;
+      /* Necesario para que ::before funcione */
+      overflow: hidden;
+      /* Oculta la parte de la ola que se sale de la tarjeta */
+    }
+
+
+    /* baner de las mini promos   */
+
+    /*
+ * ESTILO PARA LA SECCIÓN DE ICONOS DE SERVICIO
+ */
+    .service-icon-box {
+      background-color: #fff;
+      padding: 25px 15px;
+      border-radius: 10px;
+      border: 1px solid #e9ecef;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .service-icon-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      border-color: #007bff;
+      /* Color de acento al pasar el mouse */
+    }
+
+    .service-icon-box .icon {
+      margin-bottom: 15px;
+    }
+
+    .service-icon-box .icon img {
+      height: 50px;
+      /* Tamaño del ícono */
+      width: 50px;
+    }
+
+    .service-icon-box h6 {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #343a40;
+    }
   </style>
 </head>
 
@@ -268,14 +421,14 @@
           </p>
           <div class="mobile-menu fix mb-3"></div>
           <div class="offcanvas__contact">
-            <h4>Informacion de contacto</h4>
+            <h4>Informations de contact</h4>
             <ul>
               <li class="d-flex align-items-center">
                 <div class="offcanvas__contact-icon">
                   <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <div class="offcanvas__contact-text">
-                  <a target="_blank" href="#">Main Street, Melbourne, Australia</a>
+                  <a target="_blank" href="#">5945 Rue Landry, Montréal, QC H1N 1Z5, Canadá.</a>
                 </div>
               </li>
               <li class="d-flex align-items-center">
@@ -331,7 +484,7 @@
             </li>
             <li>
               <i class="fas fa-map-marker-alt"></i>
-              {direcion de compañia}
+              5945 Rue Landry, Montréal, QC H1N 1Z5, Canadá
             </li>
           </ul>
           <div class="header-top-right">
@@ -367,63 +520,17 @@
                     <ul>
 
                       <li>
-                        <a href="about.html">Nosotros</a>
+                        <a href="about.html">Nous</a>
                       </li>
                       <li>
-                        <a href="./car-details.html">Servicios</a>
+                        <a href="./car-details.html">Services</a>
                       </li>
                       <li>
-                        <a href="ubicaton.html">Ubicacion</a>
+                        <a href="ubicaton.html">Emplacement</a>
                       </li>
                       <li>
-                        <a href="contact.html">Contacto</a>
+                        <a href="contact.html">Contact</a>
                       </li>
-
-
-                      <!-- <li class="has-dropdown active menu-thumb">
-                        <a href="index.html">
-                          Home
-                          <i class="fas fa-angle-down"></i>
-                        </a>
-                        <ul class="submenu">
-                          <li><a href="index.html">Home 01</a></li>
-                          <li><a href="index-2.html">Home 02</a></li>
-                          <li><a href="index.html">Home 03</a></li>
-                        </ul>
-                      </li>
-                      <li class="has-dropdown">
-                        <a href="news.html">
-                          Pages
-                          <i class="fas fa-angle-down"></i>
-                        </a>
-                        <ul class="submenu">
-                          <li><a href="gallery.html">Gallery</a></li>
-                          <li><a href="faq.html">Faq's</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="program-details.html">
-                          Cars
-                          <i class="fas fa-angle-down"></i>
-                        </a>
-                        <ul class="submenu">
-                          <li><a href="car-grid.html">Car Grid</a></li>
-                          <li><a href="car-list.html">Car List</a></li>
-                          <li><a href="car-list-sidebar.html">Car Sidebar</a></li>
-                          <li><a href="car-details.html">Car Details</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="news.html">
-                          Blog
-                          <i class="fas fa-angle-down"></i>
-                        </a>
-                        <ul class="submenu">
-                          <li><a href="news.html">Blog</a></li>
-                          <li><a href="news-details.html">Blog Details</a></li>
-                        </ul>
-                      </li> -->
-
                     </ul>
                   </nav>
                 </div>
@@ -435,8 +542,8 @@
                   <i class="fas fa-phone-alt"></i>
                 </div>
                 <div class="content">
-                  <p> Llama en cualquier momento</p>
-                  <h6><a href="tel:+9288009850">+52 (222) - 2787979</a></h6>
+                  <p> Appelle à tout moment.</p>
+                  <h6><a href="tel:+14383248143">+1 4383248143</a></h6>
                 </div>
               </div>
 
@@ -469,10 +576,10 @@
   <!-- Hero Section Start -->
   <section class="hero-section hero-3 fix">
     <div class="array-button">
-      <button class="image-array-left bg-cover" style="background-image: url('assets/img/bg-slideshow-03.jpg');">
+      <button class="image-array-left bg-cover">
         <i class="fa-solid fa-chevron-left"></i>
       </button>
-      <button class="image-array-right bg-cover" style="background-image: url('assets/img/bg-slideshow-03.jpg');">
+      <button class="image-array-right bg-cover">
         <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
@@ -498,7 +605,8 @@
               <div class="col-xl-12">
                 <div class="hero-content">
                   <h4 class="text-white" data-animation="fadeInUp" data-delay="1.3s">
-                   Nous prenons soin de votre voiture comme si c'était la nôtre.<br> Qualité, précision et style dans chaque service.
+                    Nous prenons soin de votre voiture comme si c'était la nôtre.<br> Qualité, précision et style dans
+                    chaque service.
                   </h4>
                   <h1 class="text-white" data-animation="fadeInUp" data-delay="1.3s">
                     La Passion de la Perfection
@@ -522,7 +630,8 @@
               <div class="col-xl-12">
                 <div class="hero-content">
                   <h4 class="text-white" data-animation="fadeInUp" data-delay="1.3s">
-                    Découvrez comment notre nanotechnologie peut offrir à votre véhicule une brillance inégalée et une défense durable.
+                    Découvrez comment notre nanotechnologie peut offrir à votre véhicule une brillance inégalée et une
+                    défense durable.
                   </h4>
                   <h1 class="text-white" data-animation="fadeInUp" data-delay="1.3s">
                     BIEN PLUS QU'UN SIMPLE LAVAGE
@@ -548,6 +657,37 @@
       </div>
 
       <div class="row g-4 justify-content-center">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="promo-card">
+
+            <div class="promo-card-image">
+              <img src="assets/img/galeria/to_house.png" alt="Illustration de service">
+            </div>
+
+            <div class="promo-card-content">
+              <h3 class="card-title">
+                Service à <span class="highlight-red">Domicile</span>
+              </h3>
+
+              <p class="card-description">
+                Nous apportons notre service expert directement à votre porte.
+              </p>
+
+              <div class="horaires-info">
+                <p><strong>Lundi - Vendredi :</strong> 8h00 - 17h00</p>
+                <p><strong>Fins de semaine :</strong> sur <span class="highlight-red">rendez-vous</span></p>
+              </div>
+
+              <a href="https://wa.me/14384662851?text=Bonjour ! J'aimerais prendre un rendez-vous pour un service de detailing à domicile. Pourriez-vous m'indiquer vos disponibilités ? Merci !"
+                target="_blank" class="btn btn-promo w-100 mt-auto">
+                Prendre un Rendez-vous
+              </a>
+            </div>
+          </div>
+        </div>
+
+
 
         <div class="col-lg-4 col-md-6">
           <div class="pricing-card card-dark h-100">
@@ -690,396 +830,73 @@
   </section>
 
 
-  <!-- Car Sale Section Start  Para tarjetas de promos-->
-  <section class="car-sale-section fix section-padding pt-0">
-    <div class="container-fluid">
-      <div class="car-sale-wrapper">
-        <div class="sale-shape">
-          <img src="assets/img/bg-shape-saleoff.png" alt="shape-img">
-        </div>
-        <!-- <div class="badge-shape">
-        <img src="assets/img/bagde.png" alt="shape-img">
-      </div>  -->
-        <div class="car-shape">
-          <img src="assets/img/galeria/promo.jpg" alt="img">
-        </div>
-        <div class="car-sale-content">
-          <h2 class="wow fadeInUp" data-wow-delay=".3s">{Precio o descuento de la promo}</h2>
-          <h3 class="wow fadeInUp" data-wow-delay=".5s">termino o restriccion de la o</h3>
 
-          <a href="./car-details.html" class="theme-btn bg-header wow fadeInUp" data-wow-delay=".7s"></a>
+
+  <section id="additional-services" class="section-padding">
+    <div class="container">
+
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 style="font-size: 2.5rem; font-weight: 700;">Services Additionnels</h2>
+          <p class="lead text-muted">Complétez votre forfait avec nos soins spécialisés.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 text-center justify-content-center">
+
+
+        <div class="col-lg-2 col-md-4 col-6">
+          <div class="service-icon-box">
+            <div class="icon">
+              <img src="./assets/img/galeria/motor.png" alt="Polissage de Phares">
+            </div>
+            <h6>Nettoyage du moteur</h6>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6">
+          <div class="service-icon-box">
+            <div class="icon">
+              <img src="./assets/img/galeria/pulidor-de-coches.png" alt="Polissage de Phares">
+            </div>
+            <h6>Polissage de voiture</h6>
+          </div>
+        </div>
+
+
+        <div class="col-lg-2 col-md-4 col-6">
+          <div class="service-icon-box">
+            <div class="icon">
+              <img src="./assets/img/galeria/faros.png" alt="Polissage de Phares">
+            </div>
+            <h6>Nettoyage des phares</h6>
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-2 col-md-4 col-6">
+          <div class="service-icon-box">
+            <div class="icon">
+              <img src="./assets/img/galeria/asiento-de-coche.png" alt="Nettoyage Moteur">
+            </div>
+            <h6>Désinfection de l’intérieur </h6>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6">
+          <div class="service-icon-box">
+            <div class="icon">
+              <img src="./assets/img/galeria/limpieza-de-vidrio.png" alt="Traitement des Cuirs">
+            </div>
+            <h6>Traitement des vitres</h6>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
 
-  <!-- <section id="servicio-destacado" class="py-5 car-rentals-section-2 section-padding fix">
-    <div class="container">
-      <div class="row align-items-center g-5">
-
-        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
-          <img src="https://picsum.photos/700/466" alt="Detallado Automotriz Profesional"
-            class="img-fluid rounded-3 shadow-lg">
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-          <p class="pre-headline">Nuestro Servicio Estrella</p>
-          <h2 class="display-4 mb-3">{Nombre del servicio}</h2>
-          <p class="lead text-secondary mb-4">
-            (Texto Descriptivo de ejemplo) Devuelve a tu auto el brillo y la protección de un vehículo nuevo con nuestro
-            tratamiento cerámico de última
-            generación. No es solo un lavado, es una renovación completa.
-          </p>
-
-          <div class="row row-cols-1 row-cols-md-2 g-3 mb-4">
-            <div class="col">
-              <div class="feature-item">
-                <div class="icon-box"><i class="bi bi-shield-check"></i></div>
-                <span class="feature-text">{punto clave ejemplo} Protección de hasta 5 años contra rayones y
-                  contaminantes.</span>
-              </div>
-            </div>
-            <div class="col">
-              <div class="feature-item">
-                <div class="icon-box"><i class="bi bi-droplet-fill"></i></div>
-                <span class="feature-text">{punto clave ejemplo} Acabado súper hidrofóbico que repele agua y
-                  suciedad.</span>
-              </div>
-            </div>
-            <div class="col">
-              <div class="feature-item">
-                <div class="icon-box"><i class="bi bi-brightness-high-fill"></i></div>
-                <span class="feature-text">{punto clave ejemplo} Brillo profundo y efecto espejo (wet look)
-                  inigualable.</span>
-              </div>
-            </div>
-            <div class="col">
-              <div class="feature-item">
-                <div class="icon-box"><i class="bi bi-paint-bucket"></i></div>
-                <span class="feature-text">{punto clave ejemplo} Intensifica y restaura el color original de la
-                  pintura.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-
-  <!-- Car Rentals Section Start -->
-
-  <!-- Gallery Section Start -->
-  <!-- <div class="gallery-section-2 fix">
-    <div class="gallery-wrapper">
-      <div class="row g-4">
-        <div class="col-xxl-5 col-xl-6 col-lg-7">
-          <div class="row g-3">
-            <div class="col-lg-6 col-md-6">
-              <div class="gallery-image">
-                <img src="assets/img/gallery/g-10.jpg" alt="img">
-                <div class="icon-box">
-                  <a href="assets/img/gallery/g-10.jpg" class="icon img-popup-2">
-                    <i class="fa-solid fa-plus"></i>
-                  </a>
-                </div>
-                <div class="mask"></div>
-                <div class="mask-second"></div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <div class="row g-3">
-                <div class="col-lg-12">
-                  <div class="gallery-image">
-                    <img src="assets/img/gallery/g-11.jpg" alt="img">
-                    <div class="icon-box">
-                      <a href="assets/img/gallery/g-12.jpg" class="icon img-popup-2">
-                        <i class="fa-solid fa-plus"></i>
-                      </a>
-                    </div>
-                    <div class="mask"></div>
-                    <div class="mask-second"></div>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="gallery-image">
-                    <img src="assets/img/gallery/g-12.jpg" alt="img">
-                    <div class="icon-box">
-                      <a href="assets/img/gallery/g-12.jpg" class="icon img-popup-2">
-                        <i class="fa-solid fa-plus"></i>
-                      </a>
-                    </div>
-                    <div class="mask"></div>
-                    <div class="mask-second"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xxl-3 col-xl-6 col-lg-5 col-md-6">
-          <div class="gallery-image style-width">
-            <img src="assets/img/gallery/g-13.jpg" alt="img">
-            <div class="icon-box">
-              <a href="assets/img/gallery/g-13.jpg" class="icon img-popup-2">
-                <i class="fa-solid fa-plus"></i>
-              </a>
-            </div>
-            <div class="mask"></div>
-            <div class="mask-second"></div>
-          </div>
-        </div>
-        <div class="col-xxl-4 col-xl-6 col-lg-4 col-md-6">
-          <div class="gallery-content">
-            <div class="icon">
-              <img src="assets/img/gallery/icon.png" alt="img">
-            </div>
-            <h2>
-              Trusted & Reliable
-              Car Rentals <br>
-              Gallery
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-
-  <!-- Faster Booking Section Start -->
-  <!-- <section class="faster-booking-section fix section-padding pt-0">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-3 wow fadeInUp" data-wow-delay=".3s">
-          <div class="faster-booking-image">
-            <img src="assets/img/f-booking-01.jpg" alt="img">
-          </div>
-        </div>
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-          <div class="faster-booking-items">
-            <div class="thumb">
-              <img src="assets/img/f-booking-02.jpg" alt="img">
-            </div>
-            <div class="content">
-              <div class="icon">
-                <img src="assets/img/feature-benefit/icon-1.png" alt="icon-img">
-              </div>
-              <h4>
-                Easier & <br>
-                Faster Bookings
-              </h4>
-              <p>
-                Sed ut perspiciatis unde omnis <br> iste natus.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 wow fadeInUp" data-wow-delay=".7s">
-          <div class="faster-booking-image">
-            <img src="assets/img/f-booking-03.jpg" alt="img">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Team Section Start -->
-  <!-- <section class="team-section fix section-padding pt-0">
-    <div class="container">
-      <div class="section-title text-center">
-        <img src="assets/img/sub-icon.png" alt="icon-img" class="wow fadeInUp">
-        <span class="wow fadeInUp" data-wow-delay=".2s">Our expert people</span>
-        <h2 class="wow fadeInUp" data-wow-delay=".4s">
-          Meet Our Professional <br>
-          Team Members
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-          <div class="team-card-items">
-            <div class="border-shape">
-              <img src="assets/img/team/border.png" alt="img">
-            </div>
-            <div class="team-image">
-              <img src="assets/img/team/team-01.jpg" alt="team-img">
-            </div>
-            <div class="team-content">
-              <h3><a href="index.html">Mike Hardson</a></h3>
-              <p>manager</p>
-              <div class="social-icon d-flex align-items-center justify-content-center">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-          <div class="team-card-items">
-            <div class="border-shape">
-              <img src="assets/img/team/border.png" alt="img">
-            </div>
-            <div class="team-image">
-              <img src="assets/img/team/team-02.jpg" alt="team-img">
-            </div>
-            <div class="team-content">
-              <h3><a href="index.html">Aleesha Brown</a></h3>
-              <p>manager</p>
-              <div class="social-icon d-flex align-items-center justify-content-center">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-          <div class="team-card-items">
-            <div class="border-shape">
-              <img src="assets/img/team/border.png" alt="img">
-            </div>
-            <div class="team-image">
-              <img src="assets/img/team/team-03.jpg" alt="team-img">
-            </div>
-            <div class="team-content">
-              <h3><a href="index.html">David Jhonson</a></h3>
-              <p>manager</p>
-              <div class="social-icon d-flex align-items-center justify-content-center">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- News Section Start -->
-  <!-- <section class="news-section section-padding fix bg-cover" style="background-image: url('assets/img/news/bg.jpg');">
-    <div class="container">
-      <div class="section-title text-center">
-        <img src="assets/img/sub-icon.png" alt="icon-img" class="wow fadeInUp">
-        <span class="wow fadeInUp" data-wow-delay=".2s">From the Blog</span>
-        <h2 class="text-white wow fadeInUp" data-wow-delay=".4s">
-          Latest News & <br>
-          Articles From the Blog
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-          <div class="news-card-items">
-            <div class="news-image">
-              <img src="assets/img/news/01.jpg" alt="news-img">
-              <div class="post-date">
-                <h6>
-                  20 <br>
-                  Mar
-                </h6>
-              </div>
-            </div>
-            <div class="news-content">
-              <div class="post-client">
-                <img src="assets/img/news/client.png" alt="img">
-              </div>
-              <div class="news-cont">
-                <span>by Mike Hardson</span>
-                <h3><a href="news-details.html">The best fastest and most powerful road car</a></h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</p>
-              </div>
-              <ul>
-                <li>
-                  <i class="fa-solid fa-comments"></i>
-                  2 Comments
-                </li>
-                <li>
-                  <a href="news-details.html">
-                    <i class="fa-solid fa-arrow-right-long"></i>
-                    More
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-          <div class="news-card-items">
-            <div class="news-image">
-              <img src="assets/img/news/02.jpg" alt="news-img">
-              <div class="post-date">
-                <h6>
-                  26 <br>
-                  Mar
-                </h6>
-              </div>
-            </div>
-            <div class="news-content">
-              <div class="post-client">
-                <img src="assets/img/news/client.png" alt="img">
-              </div>
-              <div class="news-cont">
-                <span>by Mike Hardson</span>
-                <h3><a href="news-details.html">The best fastest and most powerful road car</a></h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</p>
-              </div>
-              <ul>
-                <li>
-                  <i class="fa-solid fa-comments"></i>
-                  2 Comments
-                </li>
-                <li>
-                  <a href="news-details.html">
-                    <i class="fa-solid fa-arrow-right-long"></i>
-                    More
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-          <div class="news-card-items">
-            <div class="news-image">
-              <img src="assets/img/news/03.jpg" alt="news-img">
-              <div class="post-date">
-                <h6>
-                  29 <br>
-                  Mar
-                </h6>
-              </div>
-            </div>
-            <div class="news-content">
-              <div class="post-client">
-                <img src="assets/img/news/client.png" alt="img">
-              </div>
-              <div class="news-cont">
-                <span>by Mike Hardson</span>
-                <h3><a href="news-details.html">The best fastest and most powerful road car</a></h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</p>
-              </div>
-              <ul>
-                <li>
-                  <i class="fa-solid fa-comments"></i>
-                  2 Comments
-                </li>
-                <li>
-                  <a href="news-details.html">
-                    <i class="fa-solid fa-arrow-right-long"></i>
-                    More
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
   <!-- Cta Car Booking Section Start -->
   <section class="cta-car-booking-section bg-cover section-padding"
@@ -1090,7 +907,7 @@
           <div class="cta-car-booking-items">
             <div class="content">
               <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                Nuestra sucursal
+                Notre succursale
               </h2>
             </div>
             <div class="car-image">
@@ -1111,11 +928,9 @@
           <div class="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
             <div class="faq-image">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d235.73055954338204!2d-98.18707330961341!3d19.033423211069227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1750356649775!5m2!1ses-419!2smx"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.9093142988268!2d-73.53794252337127!3d45.57226222622168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91c40e6371a79%3A0xa6322c6cf63d1e4b!2s5945%20Rue%20Landry%2C%20Montr%C3%A9al%2C%20QC%20H1N%201Z5%2C%20Canad%C3%A1!5e0!3m2!1ses-419!2smx!4v1751911198550!5m2!1ses-419!2smx"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
               <div class="color-shape float-bob-y">
                 <img src="assets/img/faq-color-shape.png" alt="img">
               </div>
@@ -1199,7 +1014,7 @@
               <!-- <img src="assets/img/logo/white-logo.svg" alt="logo-img"> -->
             </a>
           </div>
-          <h4 class="text-white">Siguenos en nuestras redes sociale</h4>
+          <h4 class="text-white">Suivez-nous sur nos réseaux sociaux.</h4>
         </div>
         <div class="social-icon d-flex align-items-center wow fadeInUp" data-wow-delay="
                     .5s">
@@ -1219,11 +1034,11 @@
           <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
             <div class="single-footer-widget shape-map">
               <div class="widget-head">
-                <h4>Contato</h4>
+                <h4>Contact</h4>
               </div>
               <div class="footer-content">
                 <p>
-                  {Direccion de ejemplo}
+                  5945 Rue Landry, Montréal, QC H1N 1Z5, Canadá
                 </p>
                 <ul class="contact-info">
                   <li>
@@ -1232,7 +1047,14 @@
                   </li>
                   <li>
                     <i class="fa-solid fa-phone-volume"></i>
-                    <a href="tel:14384662851">+1 (438) 466-2851</a>
+                    <a href="tel:+14383248143">+1 4383248143</a>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <a href="tel:+14384662851">+1 4384662851</a>
+
+
                   </li>
                 </ul>
               </div>
@@ -1240,13 +1062,13 @@
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
+      <!-- <div class="footer-bottom">
         <div class="footer-wrapper">
           <p class="wow fadeInUp" data-wow-delay=".4s">
             © Copyright 2024 by <a href="./index.html">{compañia}.com</a>
           </p>
         </div>
-      </div>
+      </div> -->
     </div>
   </footer>
 
